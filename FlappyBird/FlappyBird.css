@@ -1,0 +1,26 @@
+#canvas1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 600px;
+    border: 2px solid black;
+    background: black;
+}
+
+body{
+    background: white;
+}
+
+.recording-btn{
+    padding-top: 10px;
+    padding: 20px;
+}
+
+.btn{
+    color: white;
+    background-color: black;
+    border-radius: 3px;
+    height: 40px;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="puzzle.css">
+</head>
+<body>
+    <!-- Main Container class -->
+    <div class="container">
+
+        <!-- Heading of game -->
+        <div class="heading">
+            <h1>AWESOME PUZZLE GAME</h1>
+        </div>
+
+        <!-- Recording button to start recording -->
+        <div class="recording-btn">
+            <button class="btn">START RECORDING</button>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <div class="instruction-heading">
+                <h1>INSTRUCTIONS</h1>
+            </div>
+            <ul class="instruction-list">
+                <p>Press upper arrow to move empty box downward</p>
+                <p>Press bottom arrow to move empty box upward</p>
+                <p>Press left arrow to move empty box right</p>
+                <p>Press right arrow to move empty box left</p>
+            </ul>
+        </div>
+
+        <!-- Different types of puzzles -->
+        <div class="type-of-puzzles">
+            <img src="Images/Dog/Dog.jpg" class="image" text = "Dog_00" name="Dog" style="width: 200px; height: 200px;"/>
+            <img src="Images/Tom/Tom.jpg" class="image" text = "Tom_00" name="Tom" style="width: 200px; height: 200px;"/>
+            <img src="Images/Bheem/Bheem.png" class="image" text = "Bheem_00" name="Bheem" style="width: 200px; height: 200px;"/>
+            <img src="Images/Doraemon/Doraemon.png" class="image" text = "Doraemon_00" name="Doraemon" style="width: 200px; height: 200px;"/>
+            <img src="Images/Shinchan/Shinchan.jpg" class="image" text = "Shinchan_00" name="Shinchan" style="width: 200px; height: 200px;"/>
+        </div>
+
+        <!-- Moves count -->
+        <div class="moves-container">
+            <h1 id="moves">MOVES: 1</h1>
+            <h1 class="message-h1" id="message"></h1>
+        </div>
+
+        <!-- Puzzle space -->
+        <div class="puzzle-body-container">
+
+            <!-- Canvas in which puzzle is created -->
+            <div class="puzzle-box-container">
+                <canvas class="puzzle-canvas">
+                </canvas>
+            </div>
+
+            <!-- The image which you had to create to win the game -->
+            <div class="original-image-container">
+                <!-- <img src="https://picsum.photos/id/237/200/300" class="original-image" alt=""> -->
+            </div>
+
+            <!-- These are cuttings of images drawn on the canvas -->
+            <img src="Images/Dog/Dog_001.jpg" id="Dog_001" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Dog/Dog_002.jpg" id="Dog_002" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Dog/Dog_003.jpg" id="Dog_003" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Dog/Dog_004.jpg" id="Dog_004" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Dog/Dog_005.jpg" id="Dog_005" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Dog/Dog_006.jpg" id="Dog_006" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Dog/Dog_007.jpg" id="Dog_007" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Dog/Dog_008.jpg" id="Dog_008" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Dog/Dog_009.jpg" id="Dog_009" style="display:none; width:'150px'; height:'150px';">
+
+            <img src="Images/Tom/Tom_001.jpg" id="Tom_001" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Tom/Tom_002.jpg" id="Tom_002" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Tom/Tom_003.jpg" id="Tom_003" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Tom/Tom_004.jpg" id="Tom_004" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Tom/Tom_005.jpg" id="Tom_005" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Tom/Tom_006.jpg" id="Tom_006" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Tom/Tom_007.jpg" id="Tom_007" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Tom/Tom_008.jpg" id="Tom_008" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Tom/Tom_009.jpg" id="Tom_009" style="display:none; width:'150px'; height:'150px';">
+
+            <img src="Images/Doraemon/Doraemon_001.jpg" id="Doraemon_001" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Doraemon/Doraemon_002.jpg" id="Doraemon_002" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Doraemon/Doraemon_003.jpg" id="Doraemon_003" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Doraemon/Doraemon_004.jpg" id="Doraemon_004" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Doraemon/Doraemon_005.jpg" id="Doraemon_005" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Doraemon/Doraemon_006.jpg" id="Doraemon_006" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Doraemon/Doraemon_007.jpg" id="Doraemon_007" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Doraemon/Doraemon_008.jpg" id="Doraemon_008" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Doraemon/Doraemon_009.jpg" id="Doraemon_009" style="display:none; width:'150px'; height:'150px';">
+
+            <img src="Images/Shinchan/Shinchan_001.jpg" id="Shinchan_001" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Shinchan/Shinchan_002.jpg" id="Shinchan_002" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Shinchan/Shinchan_003.jpg" id="Shinchan_003" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Shinchan/Shinchan_004.jpg" id="Shinchan_004" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Shinchan/Shinchan_005.jpg" id="Shinchan_005" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Shinchan/Shinchan_006.jpg" id="Shinchan_006" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Shinchan/Shinchan_007.jpg" id="Shinchan_007" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Shinchan/Shinchan_008.jpg" id="Shinchan_008" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Shinchan/Shinchan_009.jpg" id="Shinchan_009" style="display:none; width:'150px'; height:'150px';">
+
+            <img src="Images/Bheem/Bheem_001.jpg" id="Bheem_001" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Bheem/Bheem_002.jpg" id="Bheem_002" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Bheem/Bheem_003.jpg" id="Bheem_003" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Bheem/Bheem_004.jpg" id="Bheem_004" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Bheem/Bheem_005.jpg" id="Bheem_005" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Bheem/Bheem_006.jpg" id="Bheem_006" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Bheem/Bheem_007.jpg" id="Bheem_007" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Bheem/Bheem_008.jpg" id="Bheem_008" style="display:none; width:'150px'; height:'150px';">
+            <img src="Images/Bheem/Bheem_009.jpg" id="Bheem_009" style="display:none; width:'150px'; height:'150px';">
+        </div>
+        <div class="btn-class">
+            <button class="replay-btn">REPLAY</button>
+        </div>
+    </div>
+    <script src="puzzle.js"></script>
+    <script src="./../recorder.js"></script>
+</body>
+</html>

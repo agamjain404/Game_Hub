@@ -1,0 +1,45 @@
+body{
+    background: url(Images/background.png);
+    background-size: cover;
+    cursor: pointer;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    font-family: sans-serif;
+    color: rgb(224, 226, 120);
+}
+
+.games{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.puzzle{
+    width: 250px;
+    height: 250px;
+    border: 20px solid black;
+    background: url(Images/puzzle.png);
+    background-size: cover;
+    cursor: pointer;
+}
+
+.flappy-bird{
+    width: 250px;
+    height: 250px;
+    border: 20px solid black;
+    background: url(Images/flappybird.webp);
+    background-size: cover;
+    cursor: pointer;
+}
+
+.fruit-ninja{
+    width: 250px;
+    height: 250px;
+    border: 20px solid black;
+    background: url(Images/fruitninja.jpg);
+    background-size: cover;
+    cursor: pointer;
+}
